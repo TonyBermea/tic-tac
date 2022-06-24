@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import Square from './Square';
 
 function Board () {
-    const [board, SetBoard] = useState(['','','','','','','','','']);
+
+    const [board, SetBoard] = useState(['','','','','','','','','']); //each of my elements represents a square
     const [player, setPlayer] = useState('X');
     const [turn, setTurn] = useState('X');
 
@@ -26,7 +27,7 @@ function Board () {
             <div className='row'>
                 <Square chooseSquare={() => {
                     chooseSquare(0);
-                }} val={board[0]} />
+                }} val={board[0]} /> //*  value will be passed based on the whatever value currently exist on board array*/
                 <Square chooseSquare={() => {
                     chooseSquare(1);
                 }} val={board[1]} />
